@@ -1,0 +1,60 @@
+@media (max-width: 768px) {
+    /* 
+    Responsive menu 
+    */
+  
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: var(--bg-color);
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        width: 150px;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+    /* 
+    responsive container 
+    */
+    .container {
+        width: 100vw;
+        margin: 0 auto;
+        border: 1px solid red;
+        padding: 8px;
+    }
+
+    /* responsive about */
+    .About {
+        flex-direction: column;
+        
+    }
+    .title_about {
+        width: 100%;
+    }
+    /* responsive experience */
+    .experience {
+        flex-direction: column;
+    }
+    .title_experience {
+        width: 100%;
+    }
+    /* responsive skills */
+    .Skills {
+        flex-direction: column;
+    }
+    .title_skills {
+        width: 100%;
+    }
+}
+
+
+

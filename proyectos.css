@@ -1,0 +1,62 @@
+:root {
+    /* --bg-color: #333; */
+    --bg-color: #000;
+    --text-color: #FFF;
+    --hover-bg-color: #575757;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+.title {
+    text-align: center;
+    padding: 30px 0;
+}
+/* .container_proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    border: 1px solid red;
+    justify-content: center;
+    justify-content: flex-start;  Alinea al inicio horizontalmente
+} */
+ /*
+.container_proyectos::after {
+    content: "";
+    flex: auto;  Ocupa el espacio sobrante para alinear la última fila 
+}*/
+.container_proyectos {
+    border: 1px solid red;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    gap: 10px;
+    
+    
+}
+.card {
+    /* width: 392px; */
+    height: 380px;
+    background-color: var(--bg-color);
+    border: 1px solid #fff;
+    border-radius: 5px;
+    display: block;
+    overflow: hidden;
+}
+.cont_img {
+    width: 100%;
+    height: 224px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.cont_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
