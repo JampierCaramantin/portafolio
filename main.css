@@ -130,6 +130,7 @@ seccion del perfil
     margin: 0 10px;
     align-items: center;
     justify-content: center;
+    color: var(--hover-bg-color);
 }
 
 /* 
