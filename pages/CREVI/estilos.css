@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: rgb(240, 240, 240);
+
+}
+.container { /*contenedor principal*/
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    /*background-color: aqua;*/
+}
+.content {
+    min-height: 80px;
+    background: #FFF;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.menu {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    font-size: 25px; /* Tamaño texto logo */
+    color: #009A52; /* Color texto logo*/
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.menu .navar ul li {
+    position: relative;
+    float: left;
+}
+.menu .navar ul li a {
+    font-size: 18px; /* Tamaño texto menu */
+    padding: 20px;
+    color: #009A52; /* Color texto logo*/
+    display: block;
+    font-weight: 400; /*grosor de texto*/
+}
+.menu .navar ul li a:hover {
+    color: #FFF;
+    background: #009A52;
+}
+#menu {
+    display: none;
+}
+.menu-icono {
+    width: 25px;
+}
+.menu label {
+    cursor: pointer;
+    background: #FFF;
+    display: none;
+}
+.slider {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+}
+.img_slider {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.txt_slider {
+    /*background-color: aqua;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*justify-content: center;*/
+}
+.txt_slider_g {
+    margin-top: 100px;
+    font-size: 35px; /* Tamaño texto slider letra grande */
+    font-weight: 500;
+    color: #FFF;
+}
+.txt_slider_p {
+    font-size: 22px; /* Tamaño texto slider letra pequeña */
+    font-weight: 300;
+    margin-top: 30px;
+    color: #FFF;
+}
+/*seccioin servicios*/
+.text_servcios{
+    margin-top: 35px;
+    margin-bottom: 35px;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 500;
+}
+.servicios {
+    display: flex;
+    flex-direction: column;
+}
+.cards_comtent {
+    display: flex;
+    justify-content: space-between;
+    /*justify-content: space-evenly;*/
+}
+.card {
+    width: 380px;
+    background: #FFF;
+}
+.cont_img_ser {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;/*para que la imagen no sobrepase este contenedor*/
+}
+.img_card{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cont_img_ser:hover .img_card {
+    transform: scale(1.5);
+    transition: .5s;
+}
+.card h4 {
+    font-size: 22px; /* Tamaño letra desc card */
+    font-weight: 400;
+    color: #000;
+    margin: 20px; /*margen en todos lados*/
+}
+.card p {
+    text-align: center;
+    margin: 0 15%;
+}
+.btn_contiza {
+    display: inline-block;
+    margin: 20px; /*margen en todos lados*/
+    background-color: #009A52;
+    padding: 5px 10px;
+    color: #FFF;
+    font-weight: 500;
+
+}
+.btn_contiza:hover {
+    background: #FFF;
+    color: #009A52;
+    border: 1px solid #009A52;
+    transition: 1s;
+}
+.text_proyectos{
+    margin-top: 35px;
+    margin-bottom: 35px;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 500;
+}
+.proyectos {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    background: #FFF;
+}
+/*Ayuda a que cada div.target se ponga en fila ya que esta como flex-direction row*/
+.targets {
+    display:flex; 
+    width: 100%;
+}
+/*posicion relativa para al estar a como absolute tome como referencia estre contenedor*/
+/*ya que toma como referencia el contenedor posicionado*/
+.target {
+    position: relative;
+    flex-grow: 1;/*cont se expande y toma el espacio disponible */
+    max-height: 330px;
+}
+.target a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    color: white; /*color de la letra*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Oculta inicialmente el enlace */
+    transition: opacity 0.3s ease; /*efecto que tiene mostrarse*/
+}
+.target:hover a {
+    opacity: 1; /* Muestra el enlace al pasar el mouse sobre el elemento */
+}
+
+.target img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Seccion formulario de contacto*/
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.info_contacto {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    background: #009A52;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+.info_contacto h3 {
+    margin-top: 20px;
+    text-align: center;
+    color: #FFF;
+    font-size: 45px;
+    font-weight: 400;
+}
+.info_contacto ul {
+    margin-top: 20px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.info_contacto ul li a{
+    display: flex;
+    color: #FFF;
+    align-items: center;
+    padding: 8px 10px;
+}
+.info_contacto ul li a img {
+    margin-right: 15px;
+    width: 34px;
+}
+.box_contacto {
+    margin-top: 30px;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #FFF;
+}
+.cont_inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+.box_contacto h3 {
+    margin-top: 20px;
+    text-align: center;
+    color: #009A52;
+    font-size: 45px;
+    font-weight: 400;
+}
+.input_txt{
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-bottom: 1px solid #009A52;
+}
+.btn_enviar {
+    margin-top: 35px;
+    font-size: 25px;
+    font-weight: 100;
+    color: #FFF;
+    border: none;
+    padding: 7px 12px;
+    background: #009A52;
+    margin-bottom: 15px;
+}
+.btn_enviar:hover {
+    background: #FFF;
+    color: #009A52;
+    border: 1px solid #009A52;
+    transition: 1s;
+}
+.maps {
+    margin-top: 35px;
+    
+}
+.maps iframe{
+    width: 100%;
+    height: 600px;
+    background: #FFF;
+}
+/*footer*/
+footer {
+    position: absolute;
+    width: 100%;
+    background: #009A52;
+    
+}
+.footer {
+    position: relative;
+    width: 100%;
+    top: 0;
+    background: #009A52;
+    
+}
+.footer_social a img {
+    width: 34px;
+
+} 
+.foot {
+    margin: 30px auto 30px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer_logo {
+    font-size: 25px; /* Tamaño texto logo */
+    color: #FFF; /* Color texto logo*/
+    text-transform: uppercase;
+    font-weight: 200;
+    margin-top: 10px;
+}
+.Foot_copy {
+    font-size: 15px; /* Tamaño texto logo */
+    color: #FFF; /* Color texto logo*/
+    text-transform: uppercase;
+    font-weight: 200;
+    margin-top: 10px;
+}
+.politicas {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    
+}
+.legal {
+    font-size: 12px; /* Tamaño texto logo */
+    color: #FFF; /* Color texto logo*/
+    text-transform: uppercase;
+    font-weight: 400;
+    padding-right: 5px;
+    border-right:1px solid #FFF ;
+}
+.privacidad {
+    font-size: 12px; /* Tamaño texto logo */
+    color: #FFF; /* Color texto logo*/
+    text-transform: uppercase;
+    font-weight: 400;
+    padding-left: 5px;
+}
+
+/* ------------- Paguina servicios ------------*/
+.fondo_servicios {
+    width: 100%;
+    height: 35vh;
+    position: relative;
+}
+.font_servivios {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.P_servicios {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF;
+}
+.cont_tar_ser {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.card_ser {
+    width: 380px;
+    background: #FFF;
+    box-shadow: 0 0.1875rem 0.4375rem 0 rgba(0,0,0,.13), 
+                0 0.0625rem 0.125rem 0 rgba(0,0,0,.11);
+}
+.img_card {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+.img_card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card_ser h4 {
+    font-size: 30px;
+    color: #000;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 15px;
+}
+.card_ser p {
+    font-size: 17px;
+    color: #000;
+    margin: 5px 10px 10px 10px;
+    text-align: justify;
+
+}
+/* ------------- Proyectos --------------------*/
+
+.fondo_proyectos {
+    width: 100%;
+    height: 35vh;
+    position: relative;
+}
+.font_proyectos {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.pro_sin_mar {
+    margin-top: 0;
+}
+
+
+
+
+/* responsivo */
+/* Inicio menu*/
+@media(max-width:991px) {
+    .content {
+        min-height: 70px;
+    }
+    .menu {
+        top: 0;
+        padding: 20px;
+    }
+    .menu label {
+        display: initial;
+    }
+    .menu .navar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #FFF;
+        display: none;
+    }
+    .menu .navar ul li {
+        width: 100%;
+    }
+    #menu:checked ~ .navar {
+        display: initial;
+    }
+    .cards_comtent {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .targets {
+        display:flex; 
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .target {
+        position: relative;
+        flex-grow: 1;
+        max-height: 330px;
+    }
+}    
+/*fin resposiv* menu*/
+@media(max-width: 700Px) {
+    .cont_tar_ser {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-content: center;
+    }
+}
